@@ -43,12 +43,20 @@ const calculator = (e) => {
 
     let operand = e.textContent;
 
+    if (currDisplay.textContent == "Why you do dis?") {
+        currDisplay.textContent = "";
+    }
+
     if (operand === "=") {
         num2 = parseFloat(currDisplay.textContent);
         console.log(num1 + " num1");
         console.log(num2 + " num2");
         console.log(operation + " operation");
-        currDisplay.textContent = operate(operation, num1, num2);
+        if (num2 == 0 && operation == "/") {
+            currDisplay.textContent = "Why you do dis?";
+        } else {
+            currDisplay.textContent = operate(operation, num1, num2);
+        }
     }
 
 
