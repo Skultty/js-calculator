@@ -94,8 +94,11 @@ const handleDecimal = () => {
 
 const handleOperator = (operand) => {
     // Save the current operand and the operator to be used later
-    num2 = parseFloat(currDisplay.textContent);
-    if (operation) {
+    if (currDisplay.textContent == "" && operand == "-") {
+      currDisplay.textContent = currDisplay.textContent + operand;
+    } else {
+        num2 = parseFloat(currDisplay.textContent);
+    if (operation && currDisplay.textContent != "") {
       num1 = operate(operation, num1, num2);
       currDisplay.textContent = num1;
       prevDisplay.textContent += ` ${operation} ${num2}`;
@@ -103,7 +106,9 @@ const handleOperator = (operand) => {
       num1 = num2;
       prevDisplay.textContent = currDisplay.textContent;
     }
-    currDisplay.textContent = "";
     operation = operand;
-};
+    currDisplay.textContent = "";
+    }
+  };
+  
 
