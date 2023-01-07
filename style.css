@@ -1,50 +1,35 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .calculator {
     display: flex;
     flex-wrap: wrap;
     width: 250px;
-    height: 300px;
-    border: 1px solid black;
+    height: 350px;
+    border: 2px solid black;
     background-color: lightgray;
-  }
+}
   .calculator button {
     width: 25%;
-    height: 25%;
     font-size: 20px;
   }
   .calculator .display {
     width: 100%;
-    height: 25%;
     background-color: white;
     font-size: 20px;
     text-align: right;
     padding: 10px;
     box-sizing: border-box;
+    border-bottom: 2px solid black;
+    margin-bottom: 3px;
   }
-  .calculator button:nth-of-type(1) {
-    background-color: white;
-    color: black;
-  }
-  .calculator button:nth-of-type(2),
-  .calculator button:nth-of-type(6),
-  .calculator button:nth-of-type(10),
-  .calculator button:nth-of-type(14) {
-    background-color: lightyellow;
-  }
-  .calculator button:nth-of-type(3),
-  .calculator button:nth-of-type(7),
-  .calculator button:nth-of-type(11),
-  .calculator button:nth-of-type(15) {
-    background-color: lightgreen;
-  }
-  .calculator button:nth-of-type(4),
-  .calculator button:nth-of-type(8),
-  .calculator button:nth-of-type(12),
-  .calculator button:nth-of-type(16) {
-    background-color: lightblue;
-  }
-  .calculator button:nth-of-type(5),
-  .calculator button:nth-of-type(9),
-  .calculator button:nth-of-type(13),
-  .calculator button:nth-of-type(17) {
-    background-color: lightpink;
-  }
+
+/* last button */
+
+.calculator button:nth-child(18) {
+    width: 100%;
+}
+
