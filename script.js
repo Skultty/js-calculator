@@ -6,6 +6,9 @@ const multiply = (a, b) => a * b;
 
 const divide = (a, b) => a / b;
 
+
+// takes in an operator and two numbers
+// returns the result of the operation
 const operate = (operator, a, b) => {
     switch (operator) {
         case "+":
