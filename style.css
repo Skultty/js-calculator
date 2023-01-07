@@ -27,7 +27,11 @@ body {
   }
 
 .calculator button:nth-child(18) {
-    width: 100%;
+    width: 50%;
+}
+
+.calculator button:nth-child(19) {
+    width: 50%;
 }
 
 .current-operand {
